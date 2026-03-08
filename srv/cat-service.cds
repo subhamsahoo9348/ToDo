@@ -1,5 +1,5 @@
-using my.bookshop as my from '../db/schema';
+using {ToDo} from '../db/schema';
 
 service CatalogService {
-    entity Books as projection on my.Books;
+    entity To_DO as projection on ToDo;
 }

@@ -74,7 +74,6 @@ modules:
       build-result: app/
       requires:
 
-
 resources:
   - name: todo-auth
     type: org.cloudfoundry.managed-service

@@ -22,7 +22,10 @@
         "auth": "xsuaa"
       },
       "destinations": true,
-      "html5-repo": true
+      "html5-repo": true,
+      "[hybrid]": {
+        "db": "hana"
+      }
     }
   }
 }

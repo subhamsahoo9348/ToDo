@@ -1,6 +1,75 @@
-<mvc:View controllerName="todo.controller.Home"
+<mvc:View
+    controllerName="todo.controller.Home"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns:tnt="sap.tnt"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        showHeader="false"
+    >
+        <!-- <HeaderContainer >
+    <Bar >
+    <contentLeft>
+    <VBox >
+    <Text text="My Tasks"></Text>
+
+    </VBox>
+    </contentLeft>
+    <contentRight>
+    <SearchField ></SearchField>
+    <Button text="Export"></Button>
+    <Button text="Add Task"></Button>
+    </contentRight>
+    </Bar>
+    </HeaderContainer> -->
+        <tnt:SideNavigation
+            id="sideNavigation"
+            selectedKey="walked"
+            expanded="true"
+        >
+            <tnt:NavigationList>
+                <tnt:NavigationListItem
+                    text="Menu"
+                    key="rootItem1"
+                    icon="sap-icon://employee"
+                >
+                    <tnt:NavigationListItem
+                        text="My Tasks"
+                        icon="sap-icon://BusinessSuiteInAppSymbols/icon-2x2-grid-layout"
+                    />
+                    <tnt:NavigationListItem
+                        text="Today"
+                        icon="sap-icon://calendar"
+                    />
+                    <tnt:NavigationListItem
+                        text="Impotant"
+                        icon="sap-icon://favorite"
+                    />
+                    <tnt:NavigationListItem
+                        text="Completed"
+                        icon="sap-icon://accept"
+                    />
+                </tnt:NavigationListItem>
+
+                <tnt:NavigationListItem
+                    text="Categories"
+                    key="rootItem2"
+                >
+                    <tnt:NavigationListItem text="Work" />
+                    <tnt:NavigationListItem text="Personal" />
+                    <tnt:NavigationListItem text="Learning" />
+                    <tnt:NavigationListItem text="Add Categories" />
+                </tnt:NavigationListItem>
+            </tnt:NavigationList>
+            <!-- <tnt:fixedItem>
+				<tnt:NavigationList>
+					<tnt:NavigationListItem text="Bar Chart" icon="sap-icon://bar-chart" />
+					<tnt:NavigationListItem selectable="false" href="https://sap.com" target="_blank" text="External Link" icon="sap-icon://attachment" />
+					<tnt:NavigationListItem selectable="false" href="https://sap.com" target="_top" text="External Link _top" icon="sap-icon://attachment" />
+					<tnt:NavigationListItem text="Compare" icon="sap-icon://compare" />
+				</tnt:NavigationList>
+			</tnt:fixedItem> -->
+        </tnt:SideNavigation>
     </Page>
 </mvc:View>
